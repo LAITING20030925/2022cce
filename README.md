@@ -188,6 +188,129 @@ int main()
     n =n / 10;
 
 }
+```
+
+
+#2022cce[week08]
+STEP.1質數
+```CPP
+
+(1)
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int bad=0;
+    for(int i=2; i<n; i++){
+        if( n%i==0 ) bad=1;
+    }
+    if(bad==0) printf("%d",n);
+    else printf("%d不好,不是質數",n);
+}
+```
+
+
+(2)
+STEP.1判斷質數
+STEP.2利用迴圈
+```CPP
+
+#include <stdio.h>
+int main()
+{
+	int a;
+	scanf("%d",&a);
+	for(int n=2; n<=a; n++){
+
+		int bad=0;
+		for(int i=2; i<n; i++){
+			if(n%i==0) bad=1;
+	    }
+		if(bad==0) printf("%d ",n);
+	}
+
+}
+```
+
+(3)
+STEP.1 利用 SUM 迴圈
+```CPP
+
+#include <stdio.h>
+int main()
+{
+    printf("請輸入 5個數字(要加起來): ");
+
+    int n;
+    int sum=0;
+    for(int i=0; i<5; i++){
+        scanf("%d",&n);
+        sum += n;
+    }
+    printf("總和是:%d",sum);
+}
+```
+
+
+(4)
+STEP.1 直角三角形
+```CPP
+
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    for(int i=1; i<=n; i++){
+        for(int k=1; k<=n-i; k++) printf(" ");
+        for(int k=1; k<=i; k++) printf("*");
+        printf("\n");
+    }
+}
+```
+
+(5)
+```CPP
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    for(int i=1; i<=n; i++){
+        for(int k=1; k<=n; k++){
+            if(k<=n-i)printf(" ");
+            else    printf("*");
+        }
+        printf("\n");
+    }
+}
+```
+
+(6)
+```CPP
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	
+	int i=1;
+	while(i<=n){
+	
+		if(k<=n-i) printf(" ");
+		else printf("*");
+		
+		k++;
+	}
+	
+	printf("\n")
+	i++;
+}
+```
+
 
 
 
